@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Bondy-Up — Entreprise à But d’Emploi de Bondy</title>
+  <meta name="description" content="Bondy-Up est l’Entreprise à But d’Emploi de Bondy, créée dans le cadre de l’expérimentation Territoires zéro chômeur de longue durée.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://bondy-up.fr/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Bondy-Up — Entreprise à But d’Emploi de Bondy">
+  <meta property="og:description" content="Créer des emplois supplémentaires en CDI et développer des activités utiles au territoire de Bondy.">
+  <meta property="og:url" content="https://bondy-up.fr/">
+
+  <style>
+    :root {
+      --red: #d71920;
+      --red-dark: #9b0f14;
+      --burgundy: #7a0e14;
+      --ink: #2a2f36;
+      --muted: #667085;
+      --line: #e7e9ee;
+      --soft: #f7f8fa;
+      --white: #ffffff;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top right, rgba(215,25,32,.06), transparent 34rem),
+        linear-gradient(180deg, #ffffff 0%, #fbfbfc 100%);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--red-dark);
+      text-underline-offset: 3px;
+    }
+
+    a:hover { color: var(--red); }
+
+    .shell {
+      width: min(1060px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 34px 0 12px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .brand img {
+      width: 190px;
+      max-width: 48vw;
+      height: auto;
+      display: block;
+    }
+
+    main {
+      padding: 26px 0 54px;
+    }
+
+    .hero {
+      background: rgba(255,255,255,.94);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: 0 18px 55px rgba(30, 38, 55, .08);
+    }
+
+    .accent {
+      height: 7px;
+      background: linear-gradient(90deg, var(--burgundy), var(--red));
+    }
+
+    .hero-inner {
+      padding: 54px 58px 48px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 14px;
+      color: var(--red-dark);
+      font-size: .84rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 800px;
+      margin: 0;
+      font-size: clamp(2.2rem, 5vw, 4.35rem);
+      line-height: 1.04;
+      letter-spacing: -.035em;
+      color: #20242a;
+    }
+
+    .lead {
+      max-width: 780px;
+      margin: 22px 0 0;
+      font-size: clamp(1.12rem, 2.1vw, 1.38rem);
+      color: #474d57;
+    }
+
+    .mission {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+      margin-top: 40px;
+    }
+
+    .panel {
+      padding: 26px 28px;
+      border-radius: 15px;
+      background: var(--soft);
+      border: 1px solid #eceef2;
+    }
+
+    .panel h2 {
+      margin: 0 0 10px;
+      font-size: 1.12rem;
+      color: var(--red-dark);
+    }
+
+    .panel p { margin: 0; }
+
+    .status {
+      margin-top: 32px;
+      padding: 22px 26px;
+      border-left: 5px solid var(--red);
+      background: #fff7f7;
+      border-radius: 0 12px 12px 0;
+    }
+
+    .status strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--red-dark);
+      font-size: 1.08rem;
+    }
+
+    .more {
+      margin-top: 26px;
+      font-size: .98rem;
+      color: #505762;
+    }
+
+    .partners {
+      margin-top: 34px;
+      padding: 28px 24px 24px;
+      text-align: center;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+    }
+
+    .partners-title {
+      margin: 0 0 16px;
+      color: var(--muted);
+      font-size: .82rem;
+      font-weight: 700;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+    }
+
+    .partners img {
+      width: 100%;
+      max-width: 980px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    footer {
+      padding: 30px 0 42px;
+      color: var(--muted);
+      font-size: .9rem;
+      text-align: center;
+    }
+
+    footer strong {
+      color: #4c525b;
+    }
+
+    @media (max-width: 760px) {
+      .shell {
+        width: min(100% - 24px, 1060px);
+      }
+
+      header {
+        padding-top: 22px;
+      }
+
+      .brand img {
+        width: 165px;
+      }
+
+      main {
+        padding-top: 18px;
+      }
+
+      .hero-inner {
+        padding: 34px 24px 30px;
+      }
+
+      .mission {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        margin-top: 30px;
+      }
+
+      .panel {
+        padding: 22px;
+      }
+
+      .partners {
+        margin-top: 22px;
+        padding: 20px 12px;
+      }
+
+      footer {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="shell brand">
+      <img src="logo-bondy-up.png" alt="Bondy-Up">
+    </div>
+  </header>
+
+  <main>
+    <div class="shell">
+      <section class="hero" aria-labelledby="titre-principal">
+        <div class="accent"></div>
+
+        <div class="hero-inner">
+          <div class="eyebrow">Entreprise à But d’Emploi de Bondy</div>
+
+          <h1 id="titre-principal">Un emploi pour chacun, des activités utiles pour le territoire.</h1>
+
+          <p class="lead">
+            Bondy-Up est l’Entreprise à But d’Emploi créée dans le cadre de
+            l’expérimentation <strong>Territoires zéro chômeur de longue durée</strong>
+            à Bondy.
+          </p>
+
+          <div class="mission">
+            <article class="panel">
+              <h2>Notre mission</h2>
+              <p>
+                Portée par l’association <strong>Pour un Droit à l’Emploi à Bondy</strong>,
+                Bondy-Up a pour mission de créer localement des emplois supplémentaires
+                en CDI accessibles aux personnes durablement privées d’emploi.
+              </p>
+            </article>
+
+            <article class="panel">
+              <h2>Notre territoire</h2>
+              <p>
+                Bondy-Up développe des activités utiles répondant aux besoins non
+                satisfaits du territoire, avec une action ancrée dans les quartiers de
+                <strong>la Noue-Caillet et de Terre-Saint-Blaise</strong>.
+              </p>
+            </article>
+          </div>
+
+          <div class="status">
+            <strong>Site en construction</strong>
+            Cette page présente Bondy-Up pendant la préparation de son site officiel.
+          </div>
+
+          <p class="more">
+            Pour en savoir plus sur Territoires zéro chômeur de longue durée à Bondy :
+            <a href="https://www.tz-bondy.com/" rel="noopener">www.tz-bondy.com</a>
+          </p>
+        </div>
+      </section>
+
+      <section class="partners" aria-label="Partenaires">
+        <p class="partners-title">Avec le soutien de nos partenaires</p>
+        <img src="partenaires-bondy-up.png"
+             alt="Partenaires de Bondy-Up : Territoires zéro chômeur de longue durée, Expérimentation territoriale contre le chômage de longue durée, Ville de Bondy, Est Ensemble Grand Paris et Département de la Seine-Saint-Denis">
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="shell">
+      <strong>Bondy-Up</strong> — Association Pour un Droit à l’Emploi à Bondy<br>
+      6 Square du 8 Mai 1945 — 93140 Bondy
+    </div>
+  </footer>
+</body>
+</html>
